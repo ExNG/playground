@@ -217,13 +217,88 @@ def aufgabe17():
 
                 print(newArray)
 
-
             else:
                 print('Did not work')
 
 
+def aufgabe18():
 
-aufgabe17()
+    """   DOES NOT WORK   """
+
+    a = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+    ]
+
+    b = [
+        [1, 2],
+        [3, 4],
+        [5, 6]
+    ]
+
+    if (len(a[0]) is len(b)):
+        newArray = []
+        for row_index, a_row in enumerate(a):
+
+            newRow = []
+
+            for index, muliplicator in enumerate(a_row):
+                newRow.append(int(
+                    a[row_index][index] * muliplicators[index]
+                ))
+
+
+            print(newRow)
+            newArray.append(newRow)
+
+        print(newArray)
+
+
+def aufgabe19():
+    root = []
+    antworten = {
+        gruppe: 2,
+        proband: 5,
+        fragebogen: 7,
+        frage: 4,
+        antworten: [
+            'Ja',
+            'Nein',
+            'Ja'
+        ]
+    }
+
+    # Gruppen
+    for gruppe in range(3):
+        root.append([])
+
+        # Probanden
+        for proband in range(15):
+            root[gruppe].append([])
+
+            # Fragebögen
+            for fragebogen in range(10):
+                root[gruppe][proband].append[]
+
+                # Fragen
+                for frage in range(12):
+                    root[gruppe][proband][fragebogen].append([])
+
+                    # Antworten
+                    for antwort in range(3):
+                        root[gruppe][proband][fragebogen][frage].append([
+                            None,
+                            None,
+                            None
+                        ])
+
+    root[4]
+
+
+
+
+aufgabe19()
 # aufgabe12([
 #     ['c', 's', 'M'],
 #     ['h', 'A', 'R'],
