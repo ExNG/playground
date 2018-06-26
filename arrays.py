@@ -258,11 +258,11 @@ def aufgabe18():
 def aufgabe19():
     root = []
     antworten = {
-        gruppe: 2,
-        proband: 5,
-        fragebogen: 7,
-        frage: 4,
-        antworten: [
+        'gruppe': 2,
+        'proband': 5,
+        'fragebogen': 7,
+        'frage': 4,
+        'antworten': [
             'Ja',
             'Nein',
             'Ja'
@@ -279,26 +279,108 @@ def aufgabe19():
 
             # Fragebögen
             for fragebogen in range(10):
-                root[gruppe][proband].append[]
+                root[gruppe][proband].append([])
 
                 # Fragen
                 for frage in range(12):
                     root[gruppe][proband][fragebogen].append([])
 
                     # Antworten
-                    for antwort in range(3):
-                        root[gruppe][proband][fragebogen][frage].append([
-                            None,
-                            None,
-                            None
-                        ])
+                    root[gruppe][proband][fragebogen][frage] = [
+                        'Bitte speichern',
+                        'sie die antworten',
+                        'des Probanden'
+                    ]
 
-    root[4]
+                    root[gruppe][proband][fragebogen][frage] = ' '.join(root[gruppe][proband][fragebogen][frage])
+
+    root[2][5][7][4] = [
+        'Ja',
+        'Nein',
+        'Ja'
+    ]
+
+    print(root[2][5][7][4])
+
+
+def aufgabe20():
+    height = 5
+    depth = 5
+    triangle = []
+
+    for a in range(height):
+        triangle.append([])
+
+        i = 0
+
+        while (i < a):
+
+            if (i == 0):
+                triangle[a].append([1])
+            else:
+                print ('a: ' + str(a))
+                print ('i: ' + str(i))
+                before = triangle[a - 1][i - 2]
+                print(before)
+
+                # triangle[a].append([
+                #     triangle[a - 2][i - 2] + triangle[a - 1][i - 1]
+                # ])
+
+            i += 1
+
+    print(triangle)
+
+
+from random import *
+def aufgabe21():
+
+    i = 0
+    numbers = []
+
+    while (i < 6):
+        number = randint(1, 49)
+
+        if (number not in numbers):
+            numbers.append(number)
+            i += 1
+
+    print(sorted(numbers))
+
+
+def aufgabe22():
+    originalWord = 'lageregal'
+    reversedWord = ''.join(
+        reversed(
+            list(originalWord)
+        )
+    )
+
+    if (originalWord == reversedWord):
+        print('It`s a Palindrom')
+    else:
+        print('It`s not')
 
 
 
 
-aufgabe19()
+
+
+
+
+
+# from graphics import *
+# def main():
+#     win = GraphWin("Pause", 100, 1000)
+#     win.getMouse() # pause for click in window
+#     win.close()
+# main()
+
+
+
+
+
+aufgabe22()
 # aufgabe12([
 #     ['c', 's', 'M'],
 #     ['h', 'A', 'R'],
